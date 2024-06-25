@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit</title>
+
+    <style>
+        .error {
+            margin: 0;
+            color: red;
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form id="formulario">
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+        <p id='error-nombre' class="error">El nombre no puede quedar vacio.</p><br><br>
+
+
+
+        <label>Edad:</label>
+        <input type="number" id="edad" name="edad">
+        <p id='error-edad' class="error">La edad debe ser un numero entero mayor de 18.</p><br><br>
+
+
+
+        <label>Interes:</label>
+        <select name="interes" id="interes">
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="deportes">Deportes</option>
+            <option value="cine">Cine</option>
+            <option value="baile">Baile</option>
+        </select>
+        <p id='error-interes' class="error">Debe seleccionar una opción de la lista de interés.</p><br><br>
+
+        <button type="submit">Enviar</button>
+
+    </form><br>
+
+
+</body>
+<script src="submit.js"></script>
+
+</html>

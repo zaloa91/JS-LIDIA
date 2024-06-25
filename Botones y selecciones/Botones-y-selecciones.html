@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habilitar Botónes</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-color: rgb(228, 207, 210);
+            padding: 50px;
+        }
+
+        select {
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        input {
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: rgb(133, 24, 24);
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        button:disabled {
+            background-color: #cccccc;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <select id="opciones" onchange="actualizarTexto()">
+            <option value="">Selecciona una opción</option>
+            <option value="opcion 1">Opción 1</option>
+            <option value="opcion 2">Opción 2</option>
+            <option value="opcion 3">Opción 3</option>
+            <option value="opcion 4">Opción 4</option>
+        </select>
+        <br>
+        <input type="text" id="cajaTexto">
+        <br>
+        <button id="boton1" onclick="deshabilitarBoton(1)" disabled>Botón 1</button>
+        <button id="boton2" onclick="deshabilitarBoton(2)" disabled>Botón 2</button>
+        <button id="boton3" onclick="deshabilitarBoton(3)" disabled>Botón 3</button>
+        <button id="boton4" onclick="deshabilitarBoton(4)" disabled>Botón 4</button>
+    </form>
+
+    <script>
+        let select = document.getElementById("opciones");
+        let cajaInput = document.getElementById("cajaTexto");
+
+        function actualizarTexto() {
+        let valorOpcion = select.options[select.selectedIndex].value;
+
+        cajaInput.value = valorOpcion;
+
+
+        let indiceSelec = select.selectedIndex;
+        if (indiceSelec >= 0 && indiceSelec <= 4)
+        document.getElementById("boton" + (indiceSelec)).disabled = false;
+
+            
+
+        }
+ 
+        function deshabilitarBoton(numero) {
+            document.getElementById("boton" + numero).disabled = true;
+        }
+    </script>
+</body>
+
+</html>
