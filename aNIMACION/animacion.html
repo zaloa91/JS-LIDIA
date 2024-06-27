@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            background-color: blueviolet;
+            color: white;
+        }
+
+        body {
+            background-color: lightgrey;
+        }
+
+        #informacion {
+            margin: 10px auto;
+            padding: 20px;
+            width: 70vw;
+            height: 70vh;
+            background-color: white;
+            text-align: center;
+            position: relative; 
+        }
+
+        #btn {
+            background-color: blueviolet;
+            color: white;
+            font-weight: bold;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #info {
+            color: white;
+            margin: 20px;
+            padding: 20px;
+            background-color: rgb(81, 161, 134);
+            border-radius: 10px;
+            opacity: 0; 
+            transition: opacity 0.5s, left 0.5s; 
+            position: relative;
+            left: -100%; 
+            
+        }
+
+        #info.active {
+            opacity: 1;
+            left: 0;
+        }
+
+        #footer {
+            background-color: blueviolet;
+            padding: 20px;
+            width: calc(100% - 40px);
+            height: 30px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Bienvenido a Mi Página</h1>
+    </header>
+
+    <div id="informacion">
+        <h2>Sección de información</h2>
+        <p>Haga clic en el botón para ver más información</p><br>
+        <button type="button" id="btn">Mostrar Información</button>
+
+        <div id="info">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, doloribus.</p>
+        </div>
+
+    </div>
+
+    <footer id="footer">
+        <p>&copy; Mi Pagina Web. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        let btn = document.getElementById('btn');
+        let info = document.getElementById('info');
+
+        btn.addEventListener('click', function () {
+            info.classList.toggle('active');
+        });
+    </script>
+
+</body>
+
+</html>

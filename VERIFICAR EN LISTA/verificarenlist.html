@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Empleado</title>
+</head>
+<body>
+    <h1>Buscar Empleado</h1>
+
+    <p>Lista de empleados: Juan, María, Carlos, Ana, Luis y Sofía</p>
+
+    <form onsubmit="buscarEmpleado(event)">
+        <label for="nombre">Ingrese el nombre del empleado:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br>
+        <button type="submit">Verificar</button>
+    </form>
+
+    <div id="resultado"></div>
+
+    <script>
+        // Lista de empleados en minúsculas para comparaciones insensibles a mayúsculas
+        let empleados = ['juan', 'maría', 'carlos', 'ana', 'luis', 'sofía'];
+
+        function buscarEmpleado(event) {
+            event.preventDefault(); // Evitar que el formulario recargue la página
+
+            let nombreEmpleado = document.getElementById('nombre').value.toLowerCase(); // Convertir a minúsculas
+
+            let encontrado = false;
+
+            // Eliminamos el uso de trim() para cumplir con la solicitud
+            for (let i = 0; i < empleados.length; i++) {
+                if (empleados[i] === nombreEmpleado) {
+                    encontrado = true;
+                    break;
+                }
+            }
+
+            if (encontrado) {
+                document.getElementById('resultado').textContent = `El empleado ${nombreEmpleado} está en la lista.`;
+            } else {
+                document.getElementById('resultado').textContent = `El empleado ${nombreEmpleado} no está en la lista.`;
+            }
+        }
+    </script>
+</body>
+</html>
