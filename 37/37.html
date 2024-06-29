@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos animadas con CSS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="37.css">
+</head>
+
+<body>
+
+    <header id='index-header'>
+        <h2>Blog de Zaloa</h2>
+
+        <nav class="navegador">
+            <ul>
+
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main id="site-main">
+        <article class="primer-post">
+            <h2>Primer post</h2>
+            <img src="/37/flor1.jpg" alt="" width="250px">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque cupiditate tenetur consectetur nemo
+                possimus totam itaque. Voluptas ea, asperiores, officiis iure vel ipsa nobis ipsam dolore totam eum, sit
+                placeat.</p>
+
+            <div id="corazon1">
+                <div>
+                    <i class="fab fa-gratipay"></i>
+                    <span class="contador">0</span>
+                </div>
+                <p>Publicado el 1 de Julio de 2024</p>
+            </div>
+        </article>
+
+        <article class="segundo-post">
+            <h2>Segundo post</h2>
+            <img src="/37/flor2.jpg" alt="" width="250px">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque cupiditate tenetur consectetur nemo
+                possimus totam itaque. Voluptas ea, asperiores, officiis iure vel ipsa nobis ipsam dolore totam eum, sit
+                placeat.</p>
+            <div id="corazon2">
+                <div>
+                    <i class="fab fa-gratipay"></i>
+                    <span class="contador">0</span>
+                </div>
+                <p>Publicado el 1 de Julio de 2024</p>
+            </div>
+
+        </article>
+
+        <article class="tercer-post">
+            <h2>Tercer post</h2>
+            <img src="/37/flor3.jpg" alt="" width="250px">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque cupiditate tenetur consectetur nemo
+                possimus totam itaque. Voluptas ea, asperiores, officiis iure vel ipsa nobis ipsam dolore totam eum, sit
+                placeat.</p>
+            <div id="corazon3">
+                <div>
+                    <i class="fab fa-gratipay"></i>
+                    <span class="contador">0</span>
+                </div>
+                <p>Publicado el 1 de Julio de 2024</p>
+            </div>
+
+        </article>
+
+        <article class="cuarto-post">
+            <h2>Cuarto post</h2>
+            <img src="/37/flor4.jpg" alt="" width="250px">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque cupiditate tenetur consectetur nemo
+                possimus totam itaque. Voluptas ea, asperiores, officiis iure vel ipsa nobis ipsam dolore totam eum, sit
+                placeat.</p>
+            <div id="corazon4">
+                <div>
+                    <i class="fab fa-gratipay"></i>
+                    <span class="contador">0</span>
+                </div>
+                <p>Publicado el 1 de Julio de 2024</p>
+            </div>
+
+        </article>
+
+
+    </main>
+
+    <footer id="site-footer">
+        <p>&copy; 2024 Blog de Zaloa. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+
+<script>
+
+    let corazones = document.querySelectorAll('.fa-gratipay');
+    let contador = document.querySelectorAll('.contador');
+
+
+    for (let i = 0; i < corazones.length; i++) {
+        corazones[i].addEventListener('click', function () {
+            contador[i].textContent = parseInt(contador[i].textContent) + 1;
+        });
+    }
+
+</script>
+
+
+</html>
+<!-- 
+los ejercicios en rojo
+necesito el del include - cajita de ese color, select y de ese color, cajita que se mueve, imagen que pasas por encima y FORMULARIO que no quede vacio-->

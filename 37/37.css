@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: 0;
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#index-header {
+    background-color: rgb(119, 117, 117);
+    padding: 20px 15%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+#index-header h2 {
+    color: white;
+}
+
+#index-header ul {
+    display: flex;
+ 
+}
+
+
+#index-header ul li a {
+    color: white;
+    margin: 0 15px;
+    margin: 5px;
+}
+
+
+body {
+    background-color: grey;
+}
+
+
+#site-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+img {
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    width: 90%;
+    border-radius: 10px;
+
+}
+
+.primer-post {
+    margin-bottom: 50px;
+    width: 40%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.segundo-post {
+    margin-bottom: 50px;
+    width: 40%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.tercer-post {
+    margin-bottom: 50px;
+    width: 40%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.cuarto-post {
+    margin-bottom: 50px;
+    width: 40%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#site-main article>p {
+    text-align: justify;
+    padding: 30px;
+}
+
+article h2 {
+    margin: 10px 15px;
+}
+
+/* HOVER */
+
+.primer-post:hover {
+    box-shadow: 10px 10px black;
+    margin-top: 10px;
+    transition: .3s;
+
+}
+
+
+.segundo-post:hover {
+    box-shadow: 10px 10px black;
+    margin-top: 10px;
+    transition: .3s;
+
+}
+
+
+.tercer-post:hover {
+    box-shadow: 10px 10px black;
+    margin-top: 10px;
+    transition: .3s;
+
+}
+
+
+
+.cuarto-post:hover {
+    box-shadow: 10px 10px black;
+    margin-top: 10px;
+    transition: .3s;
+
+}
+
+
+#corazon1 {
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+}
+
+#corazon2 {
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+}
+
+#corazon3 {
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+}
+
+#corazon4 {
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+}
+
+/* CORAZONES */
+.fa-gratipay:hover {
+    cursor: pointer;
+    color: red;
+
+}
+
+
